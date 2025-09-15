@@ -11,7 +11,7 @@ export const HeroCard = () => {
   const { theme } = useTheme();
 
   return (
-    <div className="p-4 relative">
+    <div className="p-4 mt-16 relative">
       <Card className="relative bg-gradient-card border-border/50 h-64 overflow-visible">
         {/* Large floating image with breakthrough effect - behind text */}
         <div className="absolute -top-24 left-1/2 transform -translate-x-1/2 z-0 w-80 h-80">
