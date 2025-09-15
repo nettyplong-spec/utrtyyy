@@ -11,23 +11,21 @@ export const HeroCard = () => {
   const { theme } = useTheme();
 
   return (
-    <div className="p-4 -mt-2 relative">
-      <Card className="relative bg-gradient-card border-border/50 h-64">
+    <div className="p-4 -mt-2 relative overflow-hidden">
+      <Card className="relative bg-gradient-card border-border/50 h-64 overflow-hidden">
         {/* Background overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/10" />
         
         {/* Large floating image with breakthrough effect - behind text */}
-        <div className="absolute -top-32 left-1/2 transform -translate-x-1/2 z-0">
-          <div className="relative">
-            <div className="w-96 h-96 relative">
-              <img 
-                src={theme === 'light' ? discoveryBoxLight : discoveryBoxDark} 
-                alt="Discovery Box" 
-                className="w-full h-full object-contain drop-shadow-2xl"
-              />
-              {/* Glow effect behind image */}
-              <div className="absolute inset-0 bg-primary/30 rounded-full blur-xl -z-10 scale-150 animate-pulse-glow" />
-            </div>
+        <div className="absolute -top-24 left-1/2 transform -translate-x-1/2 z-0 w-80 h-80">
+          <div className="relative w-full h-full">
+            <img 
+              src={theme === 'light' ? discoveryBoxLight : discoveryBoxDark} 
+              alt="Discovery Box" 
+              className="w-full h-full object-contain drop-shadow-2xl"
+            />
+            {/* Glow effect behind image */}
+            <div className="absolute inset-0 bg-primary/30 rounded-full blur-xl -z-10 scale-150 animate-pulse-glow" />
           </div>
         </div>
         
@@ -61,9 +59,9 @@ export const HeroCard = () => {
           </div>
         </div>
         
-        {/* Decorative elements */}
-        <div className="absolute -right-4 -bottom-4 w-16 h-16 bg-accent/10 rounded-full animate-pulse-glow" />
-        <div className="absolute -left-6 top-1/2 w-12 h-12 bg-primary/10 rounded-full animate-pulse-glow" />
+        {/* Decorative elements - positioned safely within bounds */}
+        <div className="absolute right-2 bottom-2 w-12 h-12 bg-accent/10 rounded-full animate-pulse-glow" />
+        <div className="absolute left-2 top-1/2 w-8 h-8 bg-primary/10 rounded-full animate-pulse-glow" />
       </Card>
     </div>
   );
