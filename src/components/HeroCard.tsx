@@ -11,10 +11,10 @@ export const HeroCard = () => {
   const { theme } = useTheme();
 
   return (
-    <div className="p-4 -mt-2 relative">
-      <Card className="relative bg-gradient-card border-border/50 h-64">
+    <div className="p-4 relative">
+      <Card className="relative bg-gradient-card border-border/50 h-64 overflow-visible">
         {/* Background overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/10" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/10 rounded-lg" />
         
         {/* Large floating image with breakthrough effect - behind text */}
         <div className="absolute -top-24 left-1/2 transform -translate-x-1/2 z-0 w-80 h-80">
