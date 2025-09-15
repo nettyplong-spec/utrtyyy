@@ -11,8 +11,8 @@ export const HeroCard = () => {
   const { theme } = useTheme();
 
   return (
-    <div className="p-4 -mt-2 relative overflow-hidden">
-      <Card className="relative bg-gradient-card border-border/50 h-64 overflow-hidden">
+    <div className="p-4 -mt-2 relative">
+      <Card className="relative bg-gradient-card border-border/50 h-64">
         {/* Background overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/10" />
         
